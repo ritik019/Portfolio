@@ -25,23 +25,6 @@ const projects = [
     ],
     tags: ['Python', 'TensorFlow', 'React', 'PostgreSQL'],
   },
-  {
-    id: 'shopify-migration',
-    title: 'Shopify to Tectonic Migration',
-    subtitle: 'Platform Engineering + Product Strategy',
-    color: { dark: '#0a1a0a', light: '#f0fff0' },
-    accent: '#22c55e',
-    problem: 'E-commerce platform hitting Shopify limits — performance bottlenecks, customization constraints, and scaling costs growing 40% quarter over quarter.',
-    thinking: 'Conducted competitive analysis of 5 platforms. Built a migration risk matrix and phased rollout plan. Identified that 80% of revenue came from 20% of features — migrated those first.',
-    execution: 'Led a 3-phase migration: data pipeline setup, feature parity validation, and gradual traffic shifting. Built custom monitoring dashboards to track migration health in real-time.',
-    outcome: 'Zero-downtime migration completed ahead of schedule. Platform costs reduced by 35% while page load improved by 2.3x.',
-    metrics: [
-      { label: 'Cost Reduction', value: 35, suffix: '%' },
-      { label: 'Performance Gain', value: 230, suffix: '%' },
-      { label: 'Migration Uptime', value: 100, suffix: '%' },
-    ],
-    tags: ['Node.js', 'AWS', 'Shopify API', 'Data Pipelines'],
-  },
 ];
 
 function MetricCounter({ value, suffix, label }) {
