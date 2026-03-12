@@ -7,22 +7,23 @@ const resumeItems = [
     items: [
       {
         title: 'Product Operations Analyst',
-        org: 'Tech Company',
-        period: '2023 – Present',
+        org: 'Tectonic Labs Pvt. Ltd.',
+        period: 'Apr 2025 – Present',
         points: [
-          'Led cross-functional initiatives improving product delivery by 25%',
-          'Defined and tracked KPIs for 3 product lines across 5 teams',
-          'Ran 15+ experiments resulting in 12% increase in user engagement',
+          'Led end-to-end Shopify-to-Tectonic storefront migrations for 15+ merchants including Vaaree, Frido, and Lets Beco, mapping product data and metafields for seamless product discovery.',
+          'Authored structured PRDs and implementation plans translating merchant requirements into engineering-ready documentation, reducing functional gaps by 30%.',
+          'Configured storefront discovery features including search, filters, badges, variants, and upsell components aligned with merchant merchandising strategies.',
+          'Supported storefront launches powering 600K+ daily sessions, 14K+ daily orders, and 145K+ product catalogs, driving A/B testing that improved product discovery CTR by 12%.',
         ],
       },
       {
-        title: 'Software Developer',
-        org: 'Startup Inc.',
-        period: '2021 – 2023',
+        title: 'Software Developer Intern',
+        org: 'Gravitech Dreams Pvt. Ltd.',
+        period: 'Feb 2023 – Aug 2023',
         points: [
-          'Built full-stack features used by 10,000+ daily active users',
-          'Reduced API response time by 40% through query optimization',
-          'Collaborated with PM to define technical requirements for 3 major releases',
+          'Developed responsive UI components using HTML, CSS, JavaScript, and Bootstrap, translating Figma designs into production-ready interfaces across 5+ web modules.',
+          'Integrated frontend components with backend services built using Java, JSP, and Servlets, ensuring smooth data flow between UI and server-side logic.',
+          'Improved frontend performance by optimizing DOM rendering, reducing redundant API calls, and implementing reusable components.',
         ],
       },
     ],
@@ -31,13 +32,19 @@ const resumeItems = [
     section: 'Education',
     items: [
       {
-        title: "Bachelor's in Computer Science",
-        org: 'University',
-        period: '2019 – 2023',
+        title: 'B.E. in Computer Science',
+        org: 'Savitribai Phule Pune University (SPPU)',
+        period: '2020 – 2024',
         points: [
-          'Coursework: Data Structures, ML, HCI, Product Management',
-          'Led student product club — shipped 2 campus apps',
+          'CGPA: 7.82',
+          'Secretary — Entrepreneurship Cell (E-Cell): Led planning and execution of entrepreneurship workshops, coordinating teams of 20+ members for events attracting 500+ participants.',
         ],
+      },
+      {
+        title: 'Higher Secondary Certificate (Class XII)',
+        org: 'Army Public School, Pune',
+        period: '2019 – 2020',
+        points: ['CGPA: 7.35'],
       },
     ],
   },
@@ -47,126 +54,69 @@ export default function Resume() {
   const { isDark } = useTheme();
 
   return (
-    <section id="resume" className="section-padding relative overflow-hidden">
-      <div className="max-w-4xl mx-auto">
+    <section id="resume" className="section-padding relative">
+      <div className="max-w-3xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.5 }}
+          className="mb-8"
         >
-          <span className={`text-sm font-mono tracking-widest uppercase ${
-            isDark ? 'text-indigo-400' : 'text-indigo-600'
-          }`}>
+          <p className={`text-xs font-medium uppercase tracking-widest mb-3 ${isDark ? 'text-zinc-500' : 'text-zinc-400'}`}>
             Background
-          </span>
-          <h2 className={`text-4xl md:text-5xl font-bold mt-4 ${
-            isDark ? 'text-white' : 'text-gray-900'
-          }`}>
+          </p>
+          <h2 className={`text-2xl md:text-3xl font-bold ${isDark ? 'text-white' : 'text-zinc-900'}`}>
             Resume
           </h2>
         </motion.div>
 
-        {/* Resume content */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className={`glass-card p-8 md:p-12 mb-8`}
-        >
+        <div className={`rounded-xl border p-5 md:p-7 mb-6 ${isDark ? 'border-zinc-800 bg-zinc-900/30' : 'border-zinc-200 bg-white'}`}>
           {resumeItems.map((section, sectionIdx) => (
-            <div key={section.section} className={sectionIdx > 0 ? 'mt-10' : ''}>
-              <motion.h3
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: sectionIdx * 0.2 }}
-                className={`text-sm font-mono font-bold uppercase tracking-wider mb-6 ${
-                  isDark ? 'text-indigo-400' : 'text-indigo-600'
-                }`}
-              >
+            <div key={section.section} className={sectionIdx > 0 ? 'mt-8 pt-8 border-t ' + (isDark ? 'border-zinc-800' : 'border-zinc-200') : ''}>
+              <h3 className={`text-xs font-semibold uppercase tracking-wider mb-5 ${isDark ? 'text-zinc-500' : 'text-zinc-400'}`}>
                 {section.section}
-              </motion.h3>
+              </h3>
 
-              <div className="space-y-8">
-                {section.items.map((item, itemIdx) => (
-                  <motion.div
-                    key={item.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: 0.1 + itemIdx * 0.15 }}
-                    className={`pl-6 border-l-2 ${
-                      isDark ? 'border-indigo-500/30' : 'border-indigo-300'
-                    }`}
-                  >
-                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
-                      <h4 className={`text-lg font-bold ${
-                        isDark ? 'text-white' : 'text-gray-900'
-                      }`}>
-                        {item.title}
-                      </h4>
-                      <span className={`text-sm font-mono ${
-                        isDark ? 'text-gray-500' : 'text-gray-400'
-                      }`}>
-                        {item.period}
-                      </span>
+              <div className="space-y-6">
+                {section.items.map((item) => (
+                  <div key={item.title} className={`pl-4 border-l-2 ${isDark ? 'border-zinc-700' : 'border-zinc-300'}`}>
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1">
+                      <h4 className={`text-[15px] font-semibold ${isDark ? 'text-zinc-100' : 'text-zinc-800'}`}>{item.title}</h4>
+                      <span className={`text-[13px] ${isDark ? 'text-zinc-500' : 'text-zinc-400'}`}>{item.period}</span>
                     </div>
-                    <p className={`text-sm font-medium mb-3 ${
-                      isDark ? 'text-gray-400' : 'text-gray-500'
-                    }`}>
-                      {item.org}
-                    </p>
-                    <ul className="space-y-2">
+                    <p className={`text-[13px] mb-3 ${isDark ? 'text-zinc-400' : 'text-zinc-500'}`}>{item.org}</p>
+                    <ul className="space-y-1.5">
                       {item.points.map((point, pi) => (
-                        <li
-                          key={pi}
-                          className={`text-sm leading-relaxed flex items-start gap-2 ${
-                            isDark ? 'text-gray-400' : 'text-gray-500'
-                          }`}
-                        >
-                          <span className="text-indigo-400 mt-1.5 flex-shrink-0">
-                            <svg width="6" height="6" viewBox="0 0 6 6" fill="currentColor">
-                              <circle cx="3" cy="3" r="3" />
-                            </svg>
-                          </span>
+                        <li key={pi} className={`text-[13px] leading-relaxed flex items-start gap-2 ${isDark ? 'text-zinc-400' : 'text-zinc-500'}`}>
+                          <span className={`mt-1.5 w-1 h-1 rounded-full shrink-0 ${isDark ? 'bg-zinc-600' : 'bg-zinc-300'}`} />
                           {point}
                         </li>
                       ))}
                     </ul>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
           ))}
-        </motion.div>
+        </div>
 
-        {/* Download button */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-center"
-        >
-          <motion.a
+        <div className="text-center">
+          <a
             href="#"
             onClick={(e) => e.preventDefault()}
-            whileHover={{ scale: 1.05, y: -2 }}
-            whileTap={{ scale: 0.98 }}
-            className="inline-flex items-center gap-3 px-8 py-4 bg-indigo-600 hover:bg-indigo-500 text-white rounded-full font-medium transition-colors animate-glow-pulse"
+            className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-md text-sm font-medium transition-colors ${
+              isDark
+                ? 'bg-white text-zinc-900 hover:bg-zinc-200'
+                : 'bg-zinc-900 text-white hover:bg-zinc-700'
+            }`}
           >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
             </svg>
             Download Resume
-          </motion.a>
-          <p className={`text-sm mt-3 ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>
-            PDF format, updated February 2026
-          </p>
-        </motion.div>
+          </a>
+        </div>
       </div>
     </section>
   );

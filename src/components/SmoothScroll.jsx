@@ -11,6 +11,8 @@ export default function SmoothScroll({ children }) {
       smoothWheel: true,
     });
 
+    window.__lenis = lenis;
+
     function raf(time) {
       lenis.raf(time);
       requestAnimationFrame(raf);
@@ -18,7 +20,10 @@ export default function SmoothScroll({ children }) {
 
     requestAnimationFrame(raf);
 
-    return () => lenis.destroy();
+    return () => {
+      lenis.destroy();
+      delete window.__lenis;
+    };
   }, []);
 
   return children;
