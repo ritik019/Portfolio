@@ -17,7 +17,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className={`text-sm font-medium mb-5 ${isDark ? 'text-zinc-500' : 'text-zinc-400'}`}
         >
-          Aspiring Product Manager
+          Product &amp; Business Ops — Open to Internships
         </motion.p>
 
         <motion.h1

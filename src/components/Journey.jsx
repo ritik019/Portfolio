@@ -12,28 +12,28 @@ const stages = [
     period: '2020 – 2024',
     description: 'B.E. in Computer Science at SPPU — built the foundation in CS fundamentals, algorithms, and led the Entrepreneurship Cell as Secretary.',
     icon: '🎓',
-    color: '#6366f1',
+    color: '#1e3a5f',
   },
   {
     title: 'Developer Intern',
     period: 'Feb 2023 – Aug 2023',
     description: 'Software Developer Intern at Gravitech Dreams — built responsive UIs, integrated frontend with Java backend services, and optimized frontend performance.',
     icon: '💻',
-    color: '#8b5cf6',
+    color: '#0f766e',
   },
   {
     title: 'Product Ops Analyst',
     period: 'Apr 2025 – Present',
     description: 'At Tectonic Labs — leading storefront migrations for 15+ merchants, writing PRDs, configuring discovery features, and running A/B tests powering 600K+ daily sessions.',
     icon: '📊',
-    color: '#a855f7',
+    color: '#b45309',
   },
   {
-    title: 'Aspiring APM',
-    period: 'Ongoing',
-    description: 'Combining technical depth with product sense to build AI-powered and data-driven digital products that solve real user problems.',
+    title: 'What\'s Next',
+    period: 'Exploring',
+    description: 'Seeking product intern, product analyst, or business analyst roles — combining technical depth with product sense to solve real user problems at scale.',
     icon: '🚀',
-    color: '#c084fc',
+    color: '#92400e',
   },
 ];
 
@@ -88,7 +88,7 @@ export default function Journey() {
           className="text-center mb-20"
         >
           <span className={`text-sm font-mono tracking-widest uppercase ${
-            isDark ? 'text-indigo-400' : 'text-indigo-600'
+            isDark ? 'text-teal-400' : 'text-teal-700'
           }`}>
             My Journey
           </span>
@@ -107,7 +107,7 @@ export default function Journey() {
           }`}>
             <motion.div
               style={{ height: lineHeight }}
-              className="w-full bg-gradient-to-b from-indigo-500 to-purple-500"
+              className="w-full bg-gradient-to-b from-teal-700 to-amber-700"
             />
           </div>
 
@@ -117,7 +117,7 @@ export default function Journey() {
           }`}>
             <motion.div
               style={{ height: lineHeight }}
-              className="w-full bg-gradient-to-b from-indigo-500 to-purple-500"
+              className="w-full bg-gradient-to-b from-teal-700 to-amber-700"
             />
           </div>
 

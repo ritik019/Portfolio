@@ -6,7 +6,7 @@ export default function ScrollProgress() {
   return (
     <motion.div
       style={{ scaleX: scrollYProgress }}
-      className="fixed top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 origin-left z-[60]"
+      className="fixed top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-teal-700 via-amber-600 to-rose-800 origin-left z-[60]"
     />
   );
 }

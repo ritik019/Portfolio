@@ -5,7 +5,7 @@ const journey = [
   { title: 'B.E. CS @ SPPU', period: '2020–2024' },
   { title: 'Dev Intern @ Gravitech', period: '2023' },
   { title: 'Product Ops @ Tectonic', period: '2025–Now' },
-  { title: 'Aspiring APM', period: 'Next' },
+  { title: 'Seeking Product Roles', period: 'Next' },
 ];
 
 export default function About() {
@@ -32,7 +32,7 @@ export default function About() {
               At <strong className={isDark ? 'text-zinc-200' : 'text-zinc-700'}>Tectonic Labs</strong>, I've led storefront migrations for 15+ merchants (Vaaree, Frido, Lets Beco), authored PRDs that reduced engineering gaps by 30%, and ran A/B tests that improved discovery CTR by 12%.
             </p>
             <p>
-              I don't just write specs — I configure, experiment, and measure. Every feature ships with a hypothesis and a metric to validate it. Currently seeking APM roles to build AI-powered products at scale.
+              I don't just write specs — I configure, experiment, and measure. Every feature ships with a hypothesis and a metric to validate it. Currently exploring product intern, product analyst, and business analyst opportunities to build impactful products at scale.
             </p>
           </div>
         </motion.div>

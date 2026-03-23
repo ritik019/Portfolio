@@ -10,7 +10,7 @@ const cards = [
         <path d="M3 3h7v7H3zM14 3h7v4h-7zM14 10h7v11h-7zM3 13h7v8H3z" />
       </svg>
     ),
-    color: '#6366f1',
+    color: '#1e3a5f',
   },
   {
     title: 'Metrics Thinking',
@@ -20,7 +20,7 @@ const cards = [
         <path d="M18 20V10M12 20V4M6 20v-6" />
       </svg>
     ),
-    color: '#22c55e',
+    color: '#0f766e',
   },
   {
     title: 'User Empathy',
@@ -30,7 +30,7 @@ const cards = [
         <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
       </svg>
     ),
-    color: '#ec4899',
+    color: '#9f1239',
   },
   {
     title: 'Experimentation',
@@ -42,7 +42,7 @@ const cards = [
         <circle cx="16" cy="21" r="1" />
       </svg>
     ),
-    color: '#f59e0b',
+    color: '#b45309',
   },
 ];
 
@@ -79,7 +79,7 @@ export default function ProductThinking() {
           className="text-center mb-16"
         >
           <span className={`text-sm font-mono tracking-widest uppercase ${
-            isDark ? 'text-indigo-400' : 'text-indigo-600'
+            isDark ? 'text-teal-400' : 'text-teal-700'
           }`}>
             How I Think
           </span>

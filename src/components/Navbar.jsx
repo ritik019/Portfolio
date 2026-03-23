@@ -53,9 +53,8 @@ export default function Navbar() {
           </a>
 
           {/* Mobile: Resume button at top center */}
-          <a
-            href="#resume"
-            onClick={(e) => handleNavClick(e, '#resume')}
+          <button
+            onClick={() => window.dispatchEvent(new CustomEvent('open-resume'))}
             className={`md:hidden text-xs font-medium px-3 py-1.5 rounded-md transition-colors ${
               isDark
                 ? 'bg-white text-zinc-900 hover:bg-zinc-200'
@@ -63,7 +62,7 @@ export default function Navbar() {
             }`}
           >
             Resume
-          </a>
+          </button>
 
           {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-7">
@@ -83,9 +82,8 @@ export default function Navbar() {
             ))}
 
             {/* Resume CTA */}
-            <a
-              href="#resume"
-              onClick={(e) => handleNavClick(e, '#resume')}
+            <button
+              onClick={() => window.dispatchEvent(new CustomEvent('open-resume'))}
               className={`text-[13px] font-medium px-4 py-1.5 rounded-md transition-colors ${
                 isDark
                   ? 'bg-white text-zinc-900 hover:bg-zinc-200'
@@ -93,7 +91,7 @@ export default function Navbar() {
               }`}
             >
               Resume
-            </a>
+            </button>
 
             <button
               onClick={toggleTheme}
@@ -168,15 +166,17 @@ export default function Navbar() {
                   {link.label}
                 </a>
               ))}
-              <a
-                href="#resume"
-                onClick={(e) => handleNavClick(e, '#resume')}
-                className={`text-lg font-medium py-3 ${
+              <button
+                onClick={() => {
+                  setMobileOpen(false);
+                  window.dispatchEvent(new CustomEvent('open-resume'));
+                }}
+                className={`text-lg font-medium py-3 text-left ${
                   isDark ? 'text-white' : 'text-zinc-900'
                 }`}
               >
                 Resume
-              </a>
+              </button>
             </div>
           </motion.div>
         )}
